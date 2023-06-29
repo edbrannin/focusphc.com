@@ -1,7 +1,12 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
+const chalk = require('chalk');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
+
+
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -19,6 +24,27 @@ module.exports = function (eleventyConfig) {
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginWebc);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  eleventyConfig.addShortcode("TODO", function (...args) {
+    console.log(chalk.red('TODO:'), ...args);
+  });
+
+  eleventyConfig.addPairedShortcode("card", function (content, heading, imagePath, level=2) { 
+    return `
+<card>
+  <h${level}>
+
+  ${heading}
+
+  </h${level}
+
+  ${content}
+
+</card>
+    `;
+  });
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
@@ -31,6 +57,9 @@ module.exports = function (eleventyConfig) {
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
+
+  // Don't overwrite postcss output
+  eleventyConfig.ignores.add("./src/static/css/tailwind.css")
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");

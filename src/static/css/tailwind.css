@@ -8,6 +8,10 @@ h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }
 
+h2 {
+  @apply text-3xl font-bold mb-3;
+}
+
 h3 {
   @apply text-2xl font-bold mb-3;
 }
@@ -38,3 +42,8 @@ body pre[class*="language-"] {
 .navbar .logo {
   max-height: 2em;
 }
+
+a {
+  text-decoration: underline;
+}
+
