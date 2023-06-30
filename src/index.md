@@ -32,7 +32,7 @@ Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyh
 
 {% card "Visit us" %}
 
-{% todo Button for directions %}
+{% TODO Button for directions %}
 
 <p class="address px-4">
   135 University Ave
