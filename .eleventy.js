@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const pluginCSS = require("eleventy-postcss-extension");
 
 
 
@@ -26,6 +27,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(pluginCSS);
 
   eleventyConfig.addShortcode("TODO", function (...args) {
     console.log(chalk.red('TODO:'), ...args);
@@ -33,16 +35,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPairedShortcode("card", function (content, heading, imagePath, level=2) { 
     return `
-<card>
-  <h${level}>
+<div class="card-wrapper">
+<div class="card-content">
+<h${level} slot="heading">
 
-  ${heading}
+${heading}
 
-  </h${level}
+</h${level}>
 
-  ${content}
+${content}
 
-</card>
+</div>
+</div>
     `;
   });
 
@@ -59,7 +63,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Don't overwrite postcss output
-  eleventyConfig.ignores.add("./src/static/css/tailwind.css")
+  // eleventyConfig.ignores.add("./src/static/css/tailwind.css")
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");

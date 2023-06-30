@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy browsersync",
+    "start": "npm-run-all --parallel eleventy browsersync",
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
-    "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
     "browsersync": "browser-sync start --server _site --files _site --port 8080 --no-notify --no-open"
   },
@@ -27,6 +26,8 @@
     "@11ty/eleventy-plugin-webc": "^0.11.1",
     "autoprefixer": "^10.4.2",
     "chalk": "^4",
-    "postcss": "^8.4.5"
+    "eleventy-postcss-extension": "^1.0.0",
+    "postcss": "^8.4.5",
+    "postcss-nested": "^6.0.1"
   }
 }

@@ -24,11 +24,10 @@ body pre[class*="language-"] {
 }
 
 .address {
-  white-space: pre-line;
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
+@media only screen and (prefers-color-scheme: dark) {
   body {
     @apply bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800;
     color: #dcb;
@@ -47,3 +46,24 @@ a {
   text-decoration: underline;
 }
 
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply list-disc;
+}
+
+.card-wrapper {
+  .card-content {
+    @apply p-8 max-w-prose mx-auto;
+  }
+
+  p {
+    @apply pb-4;
+  }
+}
+
+.header {
+  @apply container mx-auto flex flex-col justify-center items-center pb-4;
+}
