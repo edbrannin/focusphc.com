@@ -21,21 +21,42 @@ path: home
 
 </div>
 
+
+
 <div class="flex px-4 sp-4">
+</div>
+
+Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyhelpcenter/)
+</div>
+
+
+{% card "Visit us" %}
+  TODO: Button for directions
+  Near Scio street
+
   <p class="address px-4">
     135 University Ave
     <br />
     Rochester, NY 14605
   </p>
-  <p class="address px-4">
-    P.O. Box 25513
-    <br />
-    Rochester, NY 14625
-  </p>
-</div>
 
-Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyhelpcenter/)
-</div>
+- Hours: 1PM - 4PM, Monday-Friday
+- Saturdays:
+    - Closed until Sepember 2, 2023
+    - After September 2: open 2PM-4PM
+{% endcard %}
+
+{% card "Our Services" %}
+- Free Pregnancy Tests
+- Free Ultrasound referrals
+- Free clothes (baby, children, men & women)
+- Layetts (new baby supply kits)
+- Books, toys, food, diapers, formula, wipes, car seats, pack & plays, etc.
+- Educational materials
+- Referrals to CompassCare & Caring Choices Pregnancy Help Center
+{% endcard %}
+
+Know that we love and care about you and want to help you to help yourselves and your families!
 
 {% card "Our Mission" %}
 - To appropriately face the reality of abortion.
@@ -44,26 +65,6 @@ Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyh
 - Our mission is to provide a life-giving solution to all women & girls contemplating abortion.
 - To help them to choose life and to supply the support & referrals that they need with love.
 {% endcard %}
-
-  
-
-{% card "Rules at Focus" %}
-In order to make your visit comfortable and be good stewards of our donations, we have developed the following rules for your visit to Focus!
-
-1. You must use hand sanitizer and the sign in card must be completely and neatly filled out with correct information. The card needs to be reviewed and dated every time you visit us. Bring ID when you visit.
-2. You can visit Focus **ONCE** a month, unless of emergency.
-3. Parents must be with their children while using the bathroom.
-4. Only three people will be allowed in the material room at a time.
-5. The bags on the floor in the main room are off-limits, but totes are available for looking through.
-6. When parking out front, you must have your flashers on.
-
-    **DO NOT PARK NEXT DOOR. YOU WILL BE TOWED AND IT WILL COST YOU $140.**
-7. You must wear modest clothes. No short shorts or low tops are allowed.
-8. Please enter with an Attitude of Gratitude. Disrespect or bad attitudes will not be tolerated, and you will be asked to leave.
-9. Remember that you are on camera at Focus, for our safety and yours!
-10. Know that we love and care about you and want to help you to help yourselves and your families!
-{% endcard %}
-
 
 
 {% card "Our History" %}
@@ -74,11 +75,17 @@ Over the years it has grown into a busy and well-received resource for the city 
 We currently offer free pregnancy testing, early ultrasound referral and material aid for families who choose life for their babies.
 {% endcard %}
 
-
-
 {% card "Our Team" %}
 {% TODO "Image" %}
 Focus is staffed by its founder Mary Jost and multiple dedicated volunteers!
 {% endcard %}
 
 </div>
+
+<p class="address px-4">
+  Mailing Address:
+  <br />
+  P.O. Box 25513
+  <br />
+  Rochester, NY 14625
+</p>
