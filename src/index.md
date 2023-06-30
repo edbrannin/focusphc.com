@@ -31,15 +31,18 @@ Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyh
 
 
 {% card "Visit us" %}
-  TODO: Button for directions
-  Near Scio street
 
-  <p class="address px-4">
-    135 University Ave
-    <br />
-    Rochester, NY 14605
-  </p>
+{% todo Button for directions %}
 
+<p class="address px-4">
+  135 University Ave
+  <br />
+  Rochester, NY 14605
+</p>
+
+- Near Scio street
+- Park on the street -- no parking next door
+    - We can provide quarters for the parking meters
 - Hours: 1PM - 4PM, Monday-Friday
 - Saturdays:
     - Closed until Sepember 2, 2023
