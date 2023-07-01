@@ -57,6 +57,10 @@ ul {
 .card-wrapper {
   .card-content {
     @apply p-8 max-w-prose mx-auto;
+
+    .card-heading {
+      @apply text-center;
+    }
   }
 
   p {

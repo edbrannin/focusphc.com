@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
     return `
 <div class="card-wrapper">
 <div class="card-content">
-<h${level} slot="heading">
+<h${level} slot="heading" class="card-heading">
 
 ${heading}
 
