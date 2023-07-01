@@ -30,7 +30,7 @@ Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyh
 </div>
 
 
-{% card "Visit us" %}
+{% card "Directions & Hours" %}
 
 {% TODO Button for directions %}
 
@@ -57,9 +57,10 @@ Facebook: [Focus Pregnancy Help Center](https://www.facebook.com/focuspregnancyh
 - Books, toys, food, diapers, formula, wipes, car seats, pack & plays, etc.
 - Educational materials
 - Referrals to CompassCare & Caring Choices Pregnancy Help Center
-{% endcard %}
 
 Know that we love and care about you and want to help you to help yourselves and your families!
+{% endcard %}
+
 
 {% card "Our Mission" %}
 - To appropriately face the reality of abortion.
